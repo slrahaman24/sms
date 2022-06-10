@@ -1,0 +1,520 @@
+( All Data are send by post method )
+
+1) Mobile No Verefied And OTP SEND
+
+Url=>http://srmnew.rtcsindia.co.in/api/mobile_no_verified_and_otp_send
+
+Input Data=>
+
+mobile_no:9999999999
+
+Output Data=>
+{
+    "success": true,
+    "mobile_otp": 1234,
+    "mobile_no": "9999999999"
+}
+
+
+Error: 
+{
+    "success": false,
+    "message": "Invalid Mobile No."
+}
+
+
+2) OTP VERIFIED AND LOGIN
+
+Url=>http://srmnew.rtcsindia.co.in/api/otp_verified_and_login
+
+Input Data=>RO
+
+mobile_no:3333333333
+mobile_otp:12345
+
+Output Data=>
+{
+    "success": true,
+    "token": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTczMzE1MjNjYWE2ODgxNzE4MmFjNjdlNWRmNTM5NzQ3MjJhNmQ1MGU0ZmIzZTAxNDhkNTY2MTQ5YmVmODM1Y2M3ZDgyZmRhMTJkNzAxYWEiLCJpYXQiOjE2MTc2MDE3OTQsIm5iZiI6MTYxNzYwMTc5NCwiZXhwIjoxNjQ5MTM3Nzk0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.VfJygKqou0tGqCmQLp9LFcP3SuGRNaN-l_kdv6nWWnKNJxDoBftJvVvIzu1sH817CmHt0H8XCpFjoIqsCdYmkTXxdhBkG3ncWpJ6nfA69ZctS9cJfESMCC3_w00r5iWAJXiccGd3CDk5Z6dakqGJIu0ChxnPIRDs_p_NueUwtYuqPDQzBijcqCo_gFn55-Jx8nMd2xjSruJPAnbSqZoP5gV0_fusH5dDiyTcpRyx-b8FZjqliVGvBPV2bsG7alV_gbS4zNQMcuT-wJ2bb7v1pBr51fTx62ZA3tQ9pf1Dl8BW6RH8M0h-HAyNO1362hkKBs5TC5ozeVXW2BMucLHb-7tC8XFNmkivcG0bFYRE70nrcDJYN0rR-YSoTjjriEgsCZZHz5EINbQw3kgwNtbwsuXoQQtwxF3J_rDCmdHpzUTXxxPLEhSY779cbNLSOSeTE8yP_NKXK6P5LAdKs_do4UZnajtDq1y5SmpuL9MYIw50iHWrEZmdyCXsK47uJXGIhjQQyikBBEDmjKMDnACGrSfiq2FROAwZ-wR8Hy1W0zoTLE-G-Z43sxzTLjpQr-BAR7FrEg5H5KA1JSNhuzxNWxpOcUT74AvR3mUUQnf2b6ASTF0YRf4B3sjC2dLvMU6--TraHubz-rbBm7bFUrvJm5V1zxOurB12CSXVupiTT5A"
+    },
+    "user": {
+        "code": 1,
+        "app_web_user": 2,
+        "emp_code": 0,
+        "emp_type": 0,
+        "user_type": 1,
+        "email_address": "a@g.com",
+        "name": "Admin",
+        "designation": "Admin",
+        "mobile_no": "9999999999",
+        "user_id": "admin@1",
+        "imie_no": null,
+        "status": 1,
+        "userImage": null,
+        "created_at": "2020-09-11T12:18:45.000000Z",
+        "updated_at": null,
+        "deleted_at": null
+    }
+}
+
+3) GET LOCATION WISE POST LIST
+
+Url=>http://srmnew.rtcsindia.co.in/api/get_location_wise_post_list
+
+Input Data=>
+
+Output Data=>
+{
+    "location_wise_post_list": [
+        {
+            "code": 1,
+            "location_name": "In-site Plant111",
+            "post_list": [
+                {
+                    "code": 1,
+                    "post_name": "Gate 1"
+                },
+                {
+                    "code": 5,
+                    "post_name": "WWW"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "location_name": "Out-Site Plant",
+            "post_list": [
+                {
+                    "code": 2,
+                    "post_name": "Gate 2"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "location_name": "Suri Station",
+            "post_list": [
+                {
+                    "code": 4,
+                    "post_name": "Gate 5"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "location_name": "Township",
+            "post_list": [
+                {
+                    "code": 3,
+                    "post_name": "Gate 3"
+                }
+            ]
+        }
+    ]
+}
+
+4) SAVE LATE AND LONG POST WISE
+
+Url=>http://srmnew.rtcsindia.co.in/api/save_security_post_lat_long
+
+Input Data=>
+
+post_code:5
+post_lat:75.123654
+post_long:76.123654
+
+Output Data=>
+
+{
+    "status": 1,
+    "msg": "Location Saved Successfully."
+}
+
+5) GET SHIFT LIST
+
+Url=>http://srmnew.rtcsindia.co.in/api/get_shift_list
+
+Input Data=>
+
+Output Data=>
+
+{
+    "shift_list": [
+        {
+            "code": 2,
+            "shift": "Evening Shift"
+        },
+        {
+            "code": 4,
+            "shift": "General Shift"
+        },
+        {
+            "code": 1,
+            "shift": "Morning Shift"
+        },
+        {
+            "code": 3,
+            "shift": "Night Shift"
+        }
+    ]
+}
+
+6) SEARCH DUTY ROASTER LIST
+
+Url=>http://srmnew.rtcsindia.co.in/api/get_duty_roaster_list
+
+Input Data=>
+
+post_code:1
+shift_code:1
+location_code:1
+from_date:12/01/2020
+
+Output Data=>
+{
+    "cuttent_shift": {
+        "code": 1,
+        "shift": "Morning Shift"
+    },
+    "duty_roaster_list": [
+        {
+            "code": 1,
+            "duty_date": "29/12/2020",
+            "shift_code": 1,
+            "shift": "Morning Shift",
+            "shift_in_time": "08:01:00",
+            "shift_out_time": "14:00:00",
+            "posting_code": 1,
+            "post_name": "Gate 1",
+            "lat_coordianates": "10",
+            "long_coordinates": "11",
+            "location_code": 1,
+            "location_name": "In-site Plant111",
+            "empoye_name": "Sintu Mondal",
+            "empoye_type": "Worker",
+            "emp_id": "600001",
+            "profile_image": "",
+            "phno": "7777777777",
+            "designation": "Civilian With Armed",
+            "status": "Present"
+        },
+        {
+            "code": 6,
+            "duty_date": "30/12/2020",
+            "shift_code": 1,
+            "shift": "Morning Shift",
+            "shift_in_time": "08:01:00",
+            "shift_out_time": "14:00:00",
+            "posting_code": 1,
+            "post_name": "Gate 1",
+            "lat_coordianates": "10",
+            "long_coordinates": "11",
+            "location_code": 1,
+            "location_name": "In-site Plant111",
+            "empoye_name": "Oly Rajak",
+            "empoye_type": "Worker",
+            "emp_id": "600003",
+            "profile_image": "https://srm.docker.localhost/uploads/image/1205707331522495691.jpg",
+            "phno": "7777777777",
+            "designation": "super",
+            "status": "Present"
+        },
+        {
+            "code": 7,
+            "duty_date": "30/12/2020",
+            "shift_code": 1,
+            "shift": "Morning Shift",
+            "shift_in_time": "08:01:00",
+            "shift_out_time": "14:00:00",
+            "posting_code": 1,
+            "post_name": "Gate 1",
+            "lat_coordianates": "10",
+            "long_coordinates": "11",
+            "location_code": 1,
+            "location_name": "In-site Plant111",
+            "empoye_name": "Arabinda Hazra",
+            "empoye_type": "Worker",
+            "emp_id": "600005",
+            "profile_image": "https://srm.docker.localhost/uploads/image/1005434101522496214.png",
+            "phno": "9544788844",
+            "designation": "EX-Serviceman With Armed",
+            "status": "Present"
+        },
+        {
+            "code": 8,
+            "duty_date": "30/12/2020",
+            "shift_code": 1,
+            "shift": "Morning Shift",
+            "shift_in_time": "08:01:00",
+            "shift_out_time": "14:00:00",
+            "posting_code": 1,
+            "post_name": "Gate 1",
+            "lat_coordianates": "10",
+            "long_coordinates": "11",
+            "location_code": 1,
+            "location_name": "In-site Plant111",
+            "empoye_name": "Suman Das",
+            "empoye_type": "Worker",
+            "emp_id": "600006",
+            "profile_image": "https://srm.docker.localhost/uploads/image/578459311522433667.png",
+            "phno": "7854555155",
+            "designation": "EX-Serviceman Unarmed",
+            "status": "Present"
+        },
+        {
+            "code": 9,
+            "duty_date": "31/12/2020",
+            "shift_code": 1,
+            "shift": "Morning Shift",
+            "shift_in_time": "08:01:00",
+            "shift_out_time": "14:00:00",
+            "posting_code": 1,
+            "post_name": "Gate 1",
+            "lat_coordianates": "10",
+            "long_coordinates": "11",
+            "location_code": 1,
+            "location_name": "In-site Plant111",
+            "empoye_name": "Oly Rajak",
+            "empoye_type": "Worker",
+            "emp_id": "600003",
+            "profile_image": "https://srm.docker.localhost/uploads/image/1205707331522495691.jpg",
+            "phno": "7777777777",
+            "designation": "super",
+            "status": "Present"
+        },
+        {
+            "code": 10,
+            "duty_date": "31/12/2020",
+            "shift_code": 1,
+            "shift": "Morning Shift",
+            "shift_in_time": "08:01:00",
+            "shift_out_time": "14:00:00",
+            "posting_code": 1,
+            "post_name": "Gate 1",
+            "lat_coordianates": "10",
+            "long_coordinates": "11",
+            "location_code": 1,
+            "location_name": "In-site Plant111",
+            "empoye_name": "Arabinda Hazra",
+            "empoye_type": "Worker",
+            "emp_id": "600005",
+            "profile_image": "https://srm.docker.localhost/uploads/image/1005434101522496214.png",
+            "phno": "9544788844",
+            "designation": "EX-Serviceman With Armed",
+            "status": "Present"
+        },
+        {
+            "code": 11,
+            "duty_date": "31/12/2020",
+            "shift_code": 1,
+            "shift": "Morning Shift",
+            "shift_in_time": "08:01:00",
+            "shift_out_time": "14:00:00",
+            "posting_code": 1,
+            "post_name": "Gate 1",
+            "lat_coordianates": "10",
+            "long_coordinates": "11",
+            "location_code": 1,
+            "location_name": "In-site Plant111",
+            "empoye_name": "Suman Das",
+            "empoye_type": "Worker",
+            "emp_id": "600006",
+            "profile_image": "https://srm.docker.localhost/uploads/image/578459311522433667.png",
+            "phno": "7854555155",
+            "designation": "EX-Serviceman Unarmed",
+            "status": "Present"
+        }
+    ]
+}
+7) GET DESIGNATION LIST
+
+Url=>http://srmnew.rtcsindia.co.in/api/get_designation_list
+
+Input Data=>
+
+Output Data=>
+{
+    "designation_list": [
+        {
+            "code": 4,
+            "designation": "Civilian Unarmed"
+        },
+        {
+            "code": 3,
+            "designation": "Civilian With Armed"
+        },
+        {
+            "code": 2,
+            "designation": "EX-Serviceman Unarmed"
+        },
+        {
+            "code": 1,
+            "designation": "EX-Serviceman With Armed"
+        },
+        {
+            "code": 5,
+            "designation": "super"
+        }
+    ]
+}
+
+8) DESIGNATION WISE SECURITY SEARCH
+
+Url=>http://srmnew.rtcsindia.co.in/api/designation_wise_security_search
+
+Input Data=>
+
+designation_code:1
+
+Output Data=>
+{
+    "totcount": 4,
+    "security_list": [
+        {
+            "emp_code": 6,
+            "empoye_name": "Arabinda Hazra",
+            "empoye_type": "Worker",
+            "emp_id": "600005",
+            "profile_image": "https://srm.docker.localhost/uploads/image/1005434101522496214.png",
+            "phno": "9544788844",
+            "designation": "EX-Serviceman With Armed"
+        },
+        {
+            "emp_code": 9,
+            "empoye_name": "efer",
+            "empoye_type": "Supervisor",
+            "emp_id": "600008",
+            "profile_image": "",
+            "phno": "6666666666",
+            "designation": "EX-Serviceman With Armed"
+        }
+    ]
+}
+
+9) UPLOAD EMPLOYE PHOTO
+
+Url=>http://srmnew.rtcsindia.co.in/api/upload_employee_photo
+
+Input Data=>
+
+employee_code:8
+employee_photo:
+
+Output Data=>
+
+
+10) SAVE EMPLOYE ATTENDANCE IN
+
+Url=>http://srmnew.rtcsindia.co.in/api/save_employee_attendance_in
+
+Input Data=>
+
+emp_code:8
+shift_code:1
+date_time:08/04/2021 10:20:11
+att_lat:88.123456789
+att_long:77.987654321
+employee_photo:
+
+Output Data=>
+
+{
+    "att_entry_details": [
+        {
+            "emp_code": "8",
+            "attendance_entry_code": 1,
+            "checked_type": 2
+        }
+    ],
+    "employee_image_details": [
+        {
+            "employee_image_name": "0804202104043898094.jpg",
+            "employee_image_path": "https://srm.docker.localhost/uploads/image/"
+        }
+    ],
+    "status": 1
+}
+
+11) EMPLOYE ATTENDANCE UPDATE
+
+Url=>http://srmnew.rtcsindia.co.in/api/employee_attendance_update
+
+Input Data=>
+
+emp_att_code:8
+
+Output Data=>
+
+{
+    "status": 1,
+    "msg": "Employee Attendance Update Successfuly."
+}
+
+12) SAVE EMPLOYE ATTENDANCE OUT
+
+Url=>http://srmnew.rtcsindia.co.in/api/save_employee_attendance_out
+
+Input Data=>
+
+emp_code:8
+shift_code:1
+date_time:08/04/2021 10:20:11
+att_lat:88.123456789
+att_long:77.987654321
+employee_photo:
+
+Output Data=>
+
+{
+    "att_entry_details": [
+        {
+            "emp_code": "8",
+            "attendance_entry_code": 5,
+            "checked_type": 2
+        }
+    ],
+    "employee_image_details": [
+        {
+            "employee_image_name": "0804202104043898094.jpg",
+            "employee_image_path": "https://srm.docker.localhost/uploads/image/"
+        }
+    ],
+    "status": 1
+}
+
+
+
+13) SAVE EMPLOYEE LATIUDE AND LONGITUDE
+
+Url=>http://srmnew.rtcsindia.co.in/api/save_latitude_and_longitude
+
+Input Data=>
+
+latitude:88.123456789
+longitude:77.987654321
+
+Output Data=>
+
+{
+    "status": 1,
+    "msg": "Lat And Lng Data Save Successfully."
+}
+
+14) SAVE EMPLOYEE ATTENDANCE
+
+Url=>http://srmnew.rtcsindia.co.in/api/save_emp_attendance
+
+Input Data=>
+
+emp_code:8
+emp_id:600007
+shift_code:1
+date_time:08/04/2021 10:20:11
+
+Output Data=>
+
+{
+    "status": 1,
+    "msg": "Attendance Saved Successlly."
+}
